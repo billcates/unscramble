@@ -1,0 +1,5 @@
+Task 0 -It is a constant and it will always a constant amount of time.O(1)
+Task 1 -texts perfoms n times and calls perform n times therefore O(n)
+Task 2 -iterate n time and check for the condition therefore O(n)
+Task 3 -iterates n time and checks for the condition therefore it also checks for the condition and O(n)
+Task 4 - O(n^2)
