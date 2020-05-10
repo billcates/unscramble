@@ -30,4 +30,3 @@ marketers = {call[0] for call in calls if call[0] not in texters and call[0] not
 
 print('These numbers could be telemarketers:')
 print('\n'.join(sorted(marketers)))
-print(len(marketers))

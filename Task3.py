@@ -43,29 +43,22 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
-lt=[];ct=0;ori=0
+list1=[];count1=0;original=0
 for each in calls:
 	if each[0].startswith('(080)'):
-		ori+=1
+		original+=1
 		if each[1].startswith('('):
 			if each[1].startswith('(080)'):
-				ct+=1
+				count1+=1
 			l=each[1].find(')')
-			lt.append(each[1][1:l])
+			list1.append(each[1][1:l])
 		if each[1].startswith('7') or each[1].startswith('8') or each[1].startswith('9'):
-			lt.append(each[1][0:4])
+			list1.append(each[1][0:4])
 		if each[1].startswith('140'):
-			lt.append('140')
-bt=set(lt)
-bt=sorted(bt)
+			list1.append('140')
+list2=set(list1)
+list2=sorted(list2)
 print("The numbers called by people in Bangalore have codes:")
-for each in bt:
-	print(each)
-per=(ct/ori)*100
-print("{a:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(a=per))
-
-
-
-
-
-
+print('\n'.join(list2))
+percent=(count1/original)*100
+print("{a:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(a=percent))
